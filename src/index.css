@@ -1,0 +1,696 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:700');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=Quantico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&family=Raleway:wght@300&display=swap');
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  width: 100%;
+  height: 9vh;
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2vw;
+  padding: 0.8vw; 
+  border-bottom: 1px solid #010101;
+}
+
+.navbar>div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 60%;
+  padding: 7vw;
+}
+
+.navbar>i {
+  font-size: 2vw;
+}
+
+.link-tag1 {
+  font-family: 'Vibes', cursive;
+  font-size: 1.7vw;
+  transition: all 0.3s;
+  cursor: pointer;
+  padding-top: 0.2vw;
+  text-decoration: none;
+  color: #010101;
+  font-weight: 100;
+  transition: all 0.2s linear 0s;
+}
+
+
+.navbar>div>p,
+.link-tag {
+  font-size: 1.05vw;
+  transition: font-size 0.1s linear 0s, color 0.1s linear 0s;
+  cursor: pointer;
+  text-decoration: none;
+  color: #010101;
+  font-weight: bold;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.link-tag1:hover,
+.navbar>div>p:hover,
+.link-tag:hover {
+  color: #dd3333;
+}
+
+/* Home Component CSS */
+.main-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+
+.imagelanding {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  top: -2vw;
+  filter: blur(3px);
+}
+
+.home-heading {
+  position: absolute;
+  top: 15vw;
+  left: 39vw;
+  font-size: 3.5rem;
+  color: rgb(255, 255, 255);
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.home-heading2 {
+  position: absolute;
+  top: 26vw;
+  left: 35vw;
+  font-size: 2.5rem;
+  color: rgb(255, 255, 255);
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.home-heading::first-letter {
+  font-size: 7rem;
+  color: #ffffff;
+  padding-right: 1.2vw;
+  font-family: 'Zilla Slab Highlight', cursive;
+  animation: 3s linear 1s first infinite;
+}
+
+@keyframes first {
+  0% {
+    opacity: 0;
+    padding-top: 5vw;
+
+  }
+
+  100% {
+    opacity: 1;
+    padding-top: 0vw;
+  }
+}
+
+
+.home-sub-heading1,
+.home-sub-heading2 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Major Mono Display', monospace;
+}
+
+.home-sub-heading2 {
+  font-size: 2.6rem;
+  font-weight: bolder;
+  padding-top: 0.8vw;
+}
+
+.home-sub-heading2:after,
+.home-sub-heading2:before {
+  color: white;
+  content: '';
+  flex: 1;
+  border-bottom: groove 2px;
+  margin: auto 0.25em;
+  box-shadow: 0 -1px;
+}
+
+.main-container>div {
+  display: flex;
+  height: 52.3vh;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  /* border: 3px solid red; */
+  width: 100%;
+}
+
+.main-container>div>img {
+  width: 30vw;
+  height: 32vw;
+  margin-top: 1vw;
+}
+
+.main-container>div>span {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 50vh;
+  width: auto;
+}
+
+.main-container>div>span>h1 {
+  font-size: 3.6vw;
+  width: 50vw;
+  text-align: end;
+  font-family: 'Vibes', cursive;
+}
+
+.main-container>h2 {
+  font-family: 'Vibes', cursive;
+  font-size: 2vw;
+}
+
+.main-container>p {
+  font-size: 1.6vw;
+  font-family: 'Major Mono Display', monospace;
+}
+
+
+/* CategoryItems Component CSS */
+
+.items-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  row-gap: 10vw;
+  margin: 0px 0px 2px 0px;
+  height: 150vh;
+  background-color: #ffffff;
+}
+
+.items-container:empty {
+  display: none;
+}
+
+.items-container>div>img {
+  /* border: 0.2px solid #0C1845; */
+  width: 25vw;
+  height: 30vw;
+  /* border-radius: 13.8px; */
+  /* background-position: center; */
+  zoom: normal;
+}
+
+.item-container-one {
+  /* border: 0.1px solid #010101; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 29vw;
+  transform: scale(1);
+  height: 40vw;
+  /* transition: all 0.3s linear 0s; */
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.item-container-one:hover{
+  transform: scale(1.04);
+}
+
+
+.item-container-one>h2 {
+  font-size: 1.1rem;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+}
+
+#heading1{
+  font-size: 1.2rem;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  background-color: #dd3333;
+  width: 15vw;
+  height: 2vw;
+  padding-top: 0.4vw;
+  border-radius: 3vw;
+  color: #ffffff;
+} 
+
+/* Blobs CSS Code */
+
+.blob {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: #dd3333;
+  width: 21vmax;
+  z-index: -1;
+  animation: move 10s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes move {
+  0% {
+    transform: scale(1) translate(10px, -30px);
+  }
+
+  38% {
+    transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg);
+  }
+
+  40% {
+    transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg);
+  }
+
+  78% {
+    transform: scale(1) translate(0vw, 50vh) rotate(-20deg);
+  }
+
+  80% {
+    transform: scale(1) translate(0vw, 50vh) rotate(-20deg);
+  }
+
+  100% {
+    transform: scale(1) translate(10px, -30px);
+  }
+}
+
+/* Blobs code end right here */
+
+/* Validate User Css */
+
+.validateContainer {
+  background: #dd3333;
+  max-width: 30vw;
+  height: 44vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  backdrop-filter: saturate(180%) blur(10px);
+  border-radius: 20px;
+  margin: auto;
+  padding-top: 2vw;
+}
+
+.validateContainer>span {
+  font-size: 4vw;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bolder;
+  color: rgb(248, 248, 248);
+  font-weight: bolder;
+  transition: all 0.3s linear 0s;
+  width: 20vw;
+  height: 6vw;
+  padding-top: 1vw;
+  text-align: center;
+  transition: all 0.25s linear 0s;
+  cursor: pointer;
+  border: 0.1px solid white;
+}
+
+.validateContainer>span:hover {
+  border: 2px solid #010101;
+  
+}
+
+
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .validateContainer {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+}
+
+.validation-page-heading {
+  font-family: 'Vibes', cursive;
+  font-size: 3vw;
+  text-align: center;
+  display: block;
+}
+
+.validation-page-paragraph {
+  font-size: 1.5vw;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bolder;
+}
+
+#error {
+  text-align: center;
+  font-family: 'Major Mono Display', monospace;
+  font-size: 2.1vw;
+
+}
+
+/* --- validateUser css end */
+
+/* signup container code start */
+::selection {
+  background: rgba(26, 188, 156, 0.3);
+}
+
+.container {
+  max-width: 440px;
+  margin: auto;
+  margin-top: 5vw;
+
+}
+
+.wrapper {
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .title {
+  height: 90px;
+  background: #dd3333;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  font-family: 'Major Mono Display', monospace;
+  justify-content: center;
+}
+
+.wrapper form {
+  padding: 30px 25px 25px 25px;
+}
+
+.wrapper form .row {
+  height: 45px;
+  width:27vw;
+  margin-bottom: 15px;
+  position: relative;
+  border: 0px solid #010101;
+}
+
+.wrapper form .row input {
+  height: 100%;
+  width: 27vw;
+  outline: none;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bolder;
+  transition: all 0.3s ease;
+}
+
+form .row input:focus {
+  border-color: #dd3333;
+}
+
+form .row input::placeholder {
+  color: #999;
+}
+
+.wrapper form .row i {
+  position: absolute;
+  width: 47px;
+  height: 100%;
+  color: #fff;
+  font-size: 18px;
+  background: #010101;
+  /* border: 1px solid #010101; */
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Major Mono Display', monospace;
+}
+
+.wrapper form .pass {
+  margin: -8px 0 20px 0;
+}
+
+.wrapper form .pass a {
+  color: #010101;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.wrapper form .pass a:hover {
+  text-decoration: underline;
+}
+
+.wrapper form .button input {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  width: 25vw;
+  background-color: #dd3333;
+  cursor: pointer;
+  font-family: 'Major Mono Display', monospace;
+}
+
+
+.wrapper form .signup-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+
+.wrapper form .signup-link a {
+  font-family: 'Major Mono Display', monospace;
+}
+
+
+/* signup container code ends */
+
+/* Individual page styling */
+.main-containerI {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  height: 85vh;
+}
+
+.sub-main-container1{
+  width: 45%;
+  align-self: center;
+}
+
+.sub-main-container1 > img{
+  width: 33vw;
+  margin: auto;
+  height: 40vw;
+  display: block;
+  mix-blend-mode: darken;
+  
+}
+
+.sub-main-container2{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-left: 1px solid #010101;
+  padding-left: 5vw;
+}
+
+.sub-main-container2 > h2{
+  font-family: 'Cormorant Upright', serif;
+  font-size: 1.8rem;
+}
+
+.sub-main-container1-span{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+
+.sub-main-container1-span > p{
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.sub-main-container1-span > h2{
+  font-size: 1.8rem;
+  color: #dd3333;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+#headingPrice{
+  font-size: 1.8rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+#delivery{
+  width: 20vw;
+  border: 2.8px solid #010101;
+  height: 5vh;
+  font-size: 1rem;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+}
+
+#delivery > option{
+  font-weight: bold;
+}
+
+.sub-main-container2 > p{
+  font-size: 0.9rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+}
+
+.outer {
+  margin-left: 11vw;
+}
+
+.button {
+  border: 1px solid #010101;
+  border-radius: 3px;
+  width: 20vw;
+  height: 5vh;
+  display: block;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bolder;
+  background: linear-gradient(to right, #dd3333 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .4s ease-out;
+}
+
+.button:hover {
+  background-position: left bottom;
+  border: 1px solid #ffffff;
+}
+
+.text {
+  text-align: center;
+  font-size: 16px;
+  line-height: 30px; 
+  color: black;
+  transition: all .45s ease-out;
+  display: block;
+  padding-top: 0.25vw;
+}
+
+.text:hover {
+  color: white;  
+}
+
+
+.sub-main-container2 > span > h2{
+  font-family: 'Cormorant Upright', serif;
+}
+
+.sub-main-container2 > span > p{
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+}
+/* Individual page styling ends here */
+
+.itemImage{
+  width: 20vw;
+  height: 22vw;
+  mix-blend-mode: darken;
+}
+
+/* Cart page design */
+#main-cart-container{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+#cart-container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid rgb(175, 175, 175);
+  margin-top: 1vw;
+  margin-bottom: 0.5vw;
+  
+}
+
+#cart-container div{
+  width: 70%;
+  height: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#cart-container div h1{
+  font-size: 2.5vw;
+  font-family: Rajdhani, sans-serif;
+  text-align: center;
+}
+
+#cart-container button{
+  width: 20%;
+  height: 20vw;
+  font-size: 2.5vw;
+  border: 0px;
+  outline: transparent;
+  background-color: white;
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+#cart-container button:hover{
+  background-color: black;
+  color:  white;
+  font-size: 1.4vw;
+}
+
+
+#totalpriceText{
+  width: 45%;
+  font-size: 3vw;
+  height: 4vw;
+  font-family: Raleway, sans-serif;
+  text-align: center;
+  margin: auto;
+  margin-top: 3vw;
+  margin-bottom: 2vw;
+  background-color: #dd3333;
+  color: white;
+}
+
+#cart-icon:hover{
+  color: #dd3333;
+}
